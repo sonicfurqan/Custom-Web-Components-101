@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="index.js"></script>
+	<title>Basic Custom Componet</title>
+</head>
+<body>
+	<!--templte is not rendered by browser engine ,Template is used to define the tag body -->
+
+	<template id="custom-square">
+		<style>
+			.boxAttribute { height: 20px; width: 20px; background: red; }
+		</style>
+		<div class="boxAttribute">
+			<!--using slot define a custom area in tag using which attribute any value can be insered -->
+			<slot name="insideText"></slot>
+		</div>
+	</template>
+	<custom-square>
+		<!--addting slot to div adding text to box-->
+		<div slot="insideText">ascascacccc</div>
+	</custom-square>
+
+
+
+	<button id="changeColor" >Change Box Color</button>
+</body>
+
+</html>
