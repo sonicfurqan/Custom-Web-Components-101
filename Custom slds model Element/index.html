@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    
+	<script src="model.js"></script>
+    <title></title>
+</head>
+
+<body>
+	<template id="my-model">
+	  <link rel="stylesheet" href="slds.css">
+		<div id="custom-Model" style="height: 640px;">
+		    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+		        <div class="slds-modal__container">
+		            <header class="slds-modal__header">
+		            	<slot name="CloseButton">
+			                <button id="modelCloseButton" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="closeModel()">
+			                   	X 
+			                    <span class="slds-assistive-text">Close</span>
+			                </button>
+		            	</slot>
+		                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+		                	<slot name="Header">Modal Header</slot></h2>
+		                
+		                <p  class="slds-m-top_x-small"><slot name="Taglines"></slot></p>
+		                
+		            </header>
+		            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+		            	<slot name="Body"></slot>
+		            </div>
+		            <footer class="slds-modal__footer">
+		            	<slot name="Footer">
+		            	</slot>
+		            </footer>
+		        </div>
+		    </section>
+		    <slot name="backDorp">
+		    	<div class="slds-backdrop slds-backdrop_open"></div>
+			</slot>
+		</div>
+	</template>
+	<slds-model>
+		<div slot="Header">Defining my own header</div>
+		<div slot="Taglines">Defining my own tagline</div>
+		<div slot="Body">Defining my own body</div>
+		<div slot="Footer">Defining my own fotter</div>
+	</slds-model>
+</body>
+
+</html>
