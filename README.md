@@ -21,17 +21,23 @@
 
 5.all custom componetns should have class associated to it and that should extend from HTMLElement
 
-6.Custom component is attached to dom tree as shadow element that can be accomplished in class using this.attachShadow({ mode: "open" }).appendChild(<element>);
+6.Custom component is attached to dom tree as shadow element that can be accomplished in class using 
+	 this.attachShadow({ mode: "open" }).appendChild(<element>);
 
-7.Access to dom elements of shadow tree can be accomplished in class using this.shadowRoot.childNodes;
+7.Access to dom elements of shadow tree can be accomplished in class using 
+	 this.shadowRoot.childNodes;
 
 
 
 
 Example flow
+
 1.simple Example:Defines simple box
+
 2.Example with style:Defines box with style 
+
 3.Example with shadow intraction:Defines how to access elemtents in dom
+
 4.Example with slot:Defines how to create a custom accessable area in custom tag
 
     	 
